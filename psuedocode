@@ -3,4 +3,5 @@ Snake:
 instance variables: x co-ordinates, y co-ordinates, length
 keyboard input to move snake
 for loop to increase length with each block eaten
-if statement for what happens 
+if statement with system.exit(0) or game over for hitting walls
+or possibly 
