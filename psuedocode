@@ -1,0 +1,6 @@
+Snake class, Background class
+Snake:
+instance variables: x co-ordinates, y co-ordinates, length
+keyboard input to move snake
+for loop to increase length with each block eaten
+if statement for what happens 
