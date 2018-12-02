@@ -106,7 +106,14 @@ public class BoardGraphics{
 		frame.repaint();
 		//infinite loop that moves the snake
 		move();
-	}
+		if ((food1.foodx == snake.x && food1.foody == snake.y) ||
+				(food.foodx == snake.x && food.foody == snake.y) ||
+				(food2.foodx == snake.x && food2.foody == snake.y) ||
+				(food3.foodx == snake.x && food3.foody == snake.y)) {
+			 snake.next = new SnakePart(snake.x, snake.y, snake.directionX, snake.directionY, snake);
+			 P1 = snake.next;
+		}
+		}
 
 	public void move() {
 		while (true) {
@@ -135,11 +142,11 @@ public class BoardGraphics{
 				board[newP1X][newP1Y].setBackground(Color.green);
 				board[newX][newY].setBackground(Color.green);
 				board[oldP1x][oldP1y].setBackground(Color.white);
-			//create new snakepart when food
 			
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
+			//create new snakepart when food
 		}
 	}
 }
